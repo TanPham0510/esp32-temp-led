@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <title>ESP32 Monitor</title>
+</head>
+
+<body class="h-screen bg-gray-100">
+  <div class="flex flex-col items-center mx-auto h-full container text-center p-8 m-4 bg-white">
+    <h1 class="text-2xl font-bold mb-4">ESP32 Temperature & LED Control</h1>
+
+    <!-- Temperature Display -->
+    <div class="bg-white p-4 w-64 text-center">
+      <div class="flex gap-4">
+        <p>🌡 Temperature 1:</p>
+        <p class="font-medium text-red-500" id="temp1"> °C</p>
+      </div>
+      <div class="flex gap-4">
+        <p>🌡 Temperature 2:</p>
+        <p class="font-medium text-red-500" id="temp2"> °C</p>
+      </div>
+      <div class="flex gap-4">
+        <p>🌡 Temperature 3:</p>
+        <p class="font-medium text-red-500" id="temp3"> °C</p>
+      </div>
+    </div>
+
+    <!-- Switch Button -->
+    <div class="mt-6 text-center">
+      <label class="flex items-center cursor-pointer">
+        <span class="mr-3 text-gray-700">LED Control</span>
+        <input type="checkbox" id="ledSwitch" class="hidden">
+        <div id="switchContainer" class="w-16 h-8 bg-gray-300 rounded-full relative p-1 transition">
+          <div id="switchToggle" class="w-6 h-6 bg-white rounded-full absolute left-1 transition"></div>
+        </div>
+      </label>
+    </div>
+  </div>
+
+  <script src="./script.js"></script>
+</body>
+
+</html>
